@@ -28,7 +28,7 @@
             </div>
             <div class="lista text-white d-flex justify-content-start px-5">
                   <ol class="d-flex flex-column gap-4">
-                    <li :class="done ? 'fatto' : ''" v-for="item in lista"> {{item}} <i @click="check" class="fa-solid fa-check"></i></li>
+                    <li v-for="(item, i) in lista"><span :class="done ? 'fatto' : ''"> {{item}} </span><i @click="check" class="fa-solid fa-check"></i> <i @click="elimina(i)" class="fa-solid fa-xmark"></i></li>
                   </ol>
             </div>
         </div>

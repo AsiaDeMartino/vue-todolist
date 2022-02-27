@@ -25,7 +25,11 @@ const container = new Vue (
 
             check: function () {
                 this.done = !this.done;
-                console.log(this.done)
+                console.log(this.done);
+            },
+
+            elimina: function (indice) {
+                (this.lista).splice(indice,1);
             }
         }
     }
