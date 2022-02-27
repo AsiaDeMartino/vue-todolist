@@ -11,21 +11,23 @@ const container = new Vue (
         el: "#container",
         data: {
             text: "",
-            done: false,
-            lista: []
+            lista: [],
         },
         methods: {
             add: function () {
                 if (this.text !== "" ) {
-                    (this.lista).push(this.text);
+                    (this.lista).push({
+                        testo: this.text,
+                        done: false
+                    });
                     console.log(this.lista);
                 }
                 this.text = "";
             },
 
-            check: function () {
-                this.done = !this.done;
-                console.log(this.done);
+            check: function (indice) {
+                (this.lista[indice]).done = !(this.lista[indice]).done;
+                console.log((this.lista[indice]).done);
             },
 
             elimina: function (indice) {

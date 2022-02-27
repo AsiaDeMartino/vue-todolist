@@ -23,12 +23,12 @@
     <main>
         <div id="container" class="container d-flex flex-column justify-items-start">
             <div class="d-flex justify-content-start input-group m-5">
-                <input v-model="text" type="text" class="form-control" placeholder="Add something to do">
+                <input @keyup.enter="add" v-model="text" type="text" class="form-control" placeholder="Add something to do">
                 <button @click="add" class="btn btn-outline-light" type="button" id="button"><i class="fa-solid fa-plus"></i></button>
             </div>
             <div class="lista text-white d-flex justify-content-start px-5">
                   <ol class="d-flex flex-column gap-4">
-                    <li v-for="(item, i) in lista"><span :class="done ? 'fatto' : ''"> {{item}} </span><i @click="check" class="fa-solid fa-check"></i> <i @click="elimina(i)" class="fa-solid fa-xmark"></i></li>
+                    <li v-for="(item, i) in lista"><span :class="item.done ? 'fatto' : ''"> {{item.testo}} </span><i @click="check(i)" class="fa-solid fa-check"></i> <i @click="elimina(i)" class="fa-solid fa-xmark"></i></li>
                   </ol>
             </div>
         </div>
