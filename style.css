@@ -7,6 +7,12 @@
 
 body{
     background-color: rgb(18, 17, 17);
+    height: 100vh;
+    user-select: none;
+    border-top: 30px solid rgb(72, 30, 5);
+    border-bottom: 30px solid rgb(72, 30, 5);
+    border-right: 30px solid rgb(89, 45, 19);
+    border-left: 30px solid rgb(89, 45, 19);
 }
 
 h1{
@@ -18,4 +24,12 @@ h1{
 .lista{
     font-family: 'Pangolin', cursive;
     font-size: 2vw;
+}
+
+.fa-check{
+    margin-left: 10px;
+}
+
+.fatto{
+    text-decoration: line-through;
 }

@@ -21,18 +21,14 @@
         </div>
     </header>
     <main>
-        <div class="container d-flex flex-column justify-items-start">
+        <div id="container" class="container d-flex flex-column justify-items-start">
             <div class="d-flex justify-content-start input-group m-5">
-                <input type="text" class="form-control" placeholder="Add something to do">
-                <button class="btn btn-outline-light" type="button" id="button"><i class="fa-solid fa-plus"></i></button>
+                <input v-model="text" type="text" class="form-control" placeholder="Add something to do">
+                <button @click="add" class="btn btn-outline-light" type="button" id="button"><i class="fa-solid fa-plus"></i></button>
             </div>
             <div class="lista text-white d-flex justify-content-start px-5">
                   <ol class="d-flex flex-column gap-4">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li :class="done ? 'fatto' : ''" v-for="item in lista"> {{item}} <i @click="check" class="fa-solid fa-check"></i></li>
                   </ol>
             </div>
         </div>
