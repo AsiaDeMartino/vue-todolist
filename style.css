@@ -3,3 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+body{
+    background-color: rgb(18, 17, 17);
+}
+
+h1{
+    font-family: 'Rock Salt', cursive;
+    letter-spacing: 5px;
+    font-size:5vw;
+}
+
+.lista{
+    font-family: 'Pangolin', cursive;
+    font-size: 2vw;
+}
